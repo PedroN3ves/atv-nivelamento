@@ -8,6 +8,8 @@
   
   <title>Frontend Mentor | Results summary component</title>
 
+  <link rel="stylesheet" href="style.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,33 +17,96 @@
   </style>
 </head>
 <body>
+<main>
+  <div class="container">
+    <section id="your-result">
+      <div class="result-title">
+        <p>Your Result</p>
+      </div>
 
-  Your Result
-  76
-  of 100
+      <div class="result-score">
+        <p class="score">76</p>
+        <p class="total">of 100</p>
+      </div>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
+      <div class="result-info">
+        <p class="mainText">Great</p>
+        <p class="info">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+    </section>
+  </div>
   
-  Summary
+  <div class="container">
+    <section class="summary-view">
+      <div class="summary-title">
+        <p>Summary</p>
+      </div>
 
-  Reaction
-  80 / 100
+      <div class="summary-info">
+        <div class="reaction">
+          <div class="reaction-icon">
+            <img src="./assets/images/icon-reaction.svg" alt="">
+          </div>
+  
+          <div class="reaction-info">
+            <p>Reaction</p>
+          </div>
+  
+          <div class="reaction-score">
+            <p>80/100</p>
+          </div>
+        </div>
 
-  Memory
-  92 / 100
+        <div class="memory">
+          <div class="memory-icon">
+            <img src="./assets/images/icon-memory.svg" alt="">
+          </div>
+  
+          <div class="memory-info">
+            <p>Memory</p>
+          </div>
+  
+          <div class="memory-score">
+            <p>92/100</p>
+          </div>
+        </div>
 
-  Verbal
-  61 / 100
+        <div class="verbal">
+          <div class="verbal-icon">
+            <img src="./assets/images/icon-verbal.svg" alt="">
+          </div>
+  
+          <div class="verbal-info">
+            <p>Verbal</p>
+          </div>
+  
+          <div class="verbal-score">
+            <p>61/100</p>
+          </div>
+        </div>
 
-  Visual
-  72 / 100
-
-  Continue
+        <div class="visual">
+          <div class="visual-icon">
+            <img src="./assets/images/icon-reaction.svg" alt="">
+          </div>
+  
+          <div class="visual-info">
+            <p>Visual</p>
+          </div>
+  
+          <div class="visual-score">
+            <p>72/100</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
   
   <div class="attribution">
     Challenge by <a href="https://github.com/carloswvas" target="_blank">Carlos Vasconcelos</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/PedroN3ves">Pedro Neves</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>
