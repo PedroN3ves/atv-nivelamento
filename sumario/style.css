@@ -4,19 +4,26 @@
     box-sizing: border-box;
 }
 
-/* Style Info */
+/* Style predefinition started */
 
-@font-face {
-    font-family: 'Hanken Grotesk';
-    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+html, body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
 }
 
 :root{
+
+    --background-color: #f1ff1f1
+
     /* Primary colors */
     --LightRed: hsl(0, 100%, 67%);
+    --LightRed-100: hsla(0, 100%, 67%, .1);
     --OrangeYellow: hsl(39, 100%, 56%);
+    --OrangeYellow-100: hsla(39, 100%, 56%, .1);
     --GreenTeal: hsl(166, 100%, 37%);
+    --GreenTeal-100: hsla(166, 100%, 37%, .1);
     --CobaltBlue: hsl(234, 85%, 45%);
+    --CobaltBlue-100: hsla(234, 85%, 45%, .1);
 
     /* Gradient Colors */
     --LightSlateBlue: hsl(252, 100%, 67%); /*Background*/
@@ -31,7 +38,7 @@
     --DarkGrayBlue: hsl(224, 30%, 27%);
 }
 
-/* Style Info finished */
+/* Style predefinition finished */
 
 
 
