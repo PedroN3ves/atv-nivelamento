@@ -1,55 +1,64 @@
-const summary = [
-    {
-      category: "Reaction",
-      score: 80,
-      icon: "./assets/images/icon-reaction.svg"
-    },
-    {
-      category: "Memory",
-      score: 92,
-      icon: "./assets/images/icon-memory.svg"
-    },
-    {
-      category: "Verbal",
-      score: 61,
-      icon: "./assets/images/icon-verbal.svg"
-    },
-    {
-      category: "Visual",
-      score: 72,
-      icon: "./assets/images/icon-visual.svg"
-    }
-  ]
+const data = [
+  {
+    category: "Reaction",
+    score: 80,
+    icon: "./assets/images/icon-reaction.svg",
+    backgroundColor: "--light-red-100",
+    color: " --light-red",
+    box: "box-reaction",
+  },
+  {
+    category: "Memory",
+    score: 92,
+    icon: "./assets/images/icon-memory.svg",
+    backgroundColor: "--orangey-yellow-100",
+    color: "--orangey-yellow",
+    box: "box-memory",
+  },
+  {
+    category: "Verbal",
+    score: 61,
+    icon: "./assets/images/icon-verbal.svg",
+    backgroundColor: "--green-teal-100",
+    color: "--green-teal",
+    box: "box-verbal",
+  },
+  {
+    category: "Visual",
+    score: 72,
+    icon: "./assets/images/icon-visual.svg",
+    backgroundColor: "--cobalt-blue-100",
+    color: "--cobalt-blue",
+    box: "box-visual",
+  },
+];
 
-  const SummaryView = document.querySelector('.summary-view');
+const summaryBox = document.querySelector('.summary-box')
 
 
-  window.addEventListener("DOMContentLoaded" , () => {
-    displaySummary(summary)
-  });
-
-  function displaySummary(SummaryView){
-    let showSummary = SummaryView.map((value) => {
+// use window for being working with a web window
+window.addEventListener('DOMContentLoaded', ()=>{
+  // console.log(data[2].score)
+  let displaySummary = data.map( (item)=>{
     return `
-    <div class="content">
-        <div class="summary-icon">
-          <img src="${value.icon}" alt="">
-        </div>
-
-        <div class="summary-info">
-          <p>${value.category}</p>
-        </div>
-
-        <div class="summary-score">
-          <p>${value.score}/100</p>
-        </div>
-
+    <style>
+      .${item.box}{
+        background-color: var(${item.backgroundColor});
+        color: var(${item.color})
+      }
+    </style>
+      <div class="summary-box ${item.box}">
+        <article class="summary-info">
+          <img src=${item.icon} alt="">
+          <p>${item.category}</p>
+        </article>
+          <h5 class="summary-calc"><span>${item.score}</span> / 100</h5>
       </div>
-        `
-    });
+    `
+  } )
 
-    showSummary = showSummary.join("");
-    SummaryView.innerHTML = SummaryView;
-  }
-
+  displaySummary = displaySummary.join("")
   console.log(displaySummary)
+
+  summaryBox.innerHTML = displaySummary
+})
